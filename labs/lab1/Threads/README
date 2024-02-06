@@ -1,0 +1,86 @@
+###########################
+###  Laboratorio de Threads
+
+El siguiente laboratorio tiene como objetivo generar curiosidad del concepto sobre los Threads, por lo que se realizará una serie de preguntas y una actividad la cual reforzará sus conocimientos sobre el tema.
+
+Actividad
+- ¿Qué es un thread?
+
+- ¿Qué es un Proceso?
+
+- ¿En C, Qué es lo que hace fork()? 
+	- Explique con sus palabras lo que pasa
+	- Apoye su razonamiento con una Imagen / Dibujo
+
+- ¿En C, Qué es lo que hace pthread_join()? 
+	- Explique con sus palabras lo que pasa
+	- Apoye su razonamiento con una Imagen / Dibujo
+
+- ¿Cuál de los dos códigos en C adjuntos en la carpeta tiene un mejor rendimiento? 
+	- Analice el código y su funcionamiento
+	- Razone su respuesta en base a lo que esta pasando.
+	- Utilice una Tabla Comparativa.
+
+- En JAVA 
+	- ¿Cuáles son las diferencias entre implementar un Thread como un extends de la clase Thread y con un Runnable? 
+	- Para agregar otro argumento a su razonamiento con las diferencias entre las implementaciones en JAVA, cree dos archivos java para cada implementación Thread y Runnable, los cuales imprimirán su nombre 100 veces.
+
+
+
+#### ENTREGA 
+
+- El Laboratorio debe entregarse por medio del GES
+- Debe entregar un ZIP con todos los archivos, no se aceptarán Enlaces de lo contrario no tendrá nota.
+- Los Documentos deben ser en PDF.
+- Las Imagenes en PNG o JPG 
+
+
+
+
+
+####### SETUP de Lab.
+
+- Antes de iniciar su laboratorio tiene que instalar Docker en su sistema (Windows, Linux, MacOS Intel/Apple Silicon o el que soporte Docker)
+	https://docs.docker.com/engine/install/
+
+- Luego de la instalación debe ejecutar el comando (1)
+
+- Al terminar la instalación se encontrará en el bash Ubuntu 16.04 
+
+- Debe de actualizar las librerias:
+	apt update
+
+- Instalar GCC
+	apt install gcc -y 
+	gcc --version
+
+- Instalar Make para poder ejecutar los makefiles
+	apt install make
+
+- La carpeta ubuntu_Home que esta dentro de su laboratorio se hace referencia en docker en la carpeta /home por lo que puede navegar hasta el path  /home/lab/   para encontrar los archivos y el archivos makefile donde puede ejecutar
+	make codigo1
+	make codigo2
+
+y lo puede ejecutar:
+	./codigo1
+	./codigo2
+
+Listo ahora ya puede iniciar con su laboratorio.
+
+
+
+#### COMANDOS 
+
+1)  Para iniciar el Laboratorio cree el contenedor Ubuntu1604 con el siguiente comando:
+
+docker run --name Ubuntu1604 -v ./ubuntu_home:/home -it ubuntu:16.04 bash
+
+
+2)  En dado caso el contenedor esta Detenido puede iniciarlo con el siguiente comando:
+
+docker start Ubuntu1604
+
+
+3)  Para volver a ingresar al bash del contenedor ejecute el siguiente comando:
+
+docker exec -it Ubuntu1604 bash

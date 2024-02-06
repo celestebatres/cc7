@@ -1,0 +1,17 @@
+# Ignore Mac system files
+.DS_store
+
+# Ignore node_modules folder
+node_modules
+
+# Ignore all text files
+*.txt
+
+# Ignore files related to API keys
+.env
+
+# Ignore SASS config files
+.sass-cache
+
+/labs/lab2/Bootloader/Scripts/binutils-2.34.tar.gz
+/labs/lab2/Bootloader/Scripts/gcc-9.2.0.tar.gz
