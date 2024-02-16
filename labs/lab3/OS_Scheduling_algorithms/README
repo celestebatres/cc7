@@ -1,0 +1,16 @@
+
+El Archivo listProcess.cpu  tiene el siguiente formato
+
+PXX	AT	BT	V
+P00	0	5	1
+P01	1	5	1
+
+Los encabezados son:
+PXX es el numero de proceso MAX P99 
+AT  Arrive Time el tiempo que llega el proceso
+BT  Burn Time es el tiempo que dura el proceso
+V   Este valor es para PR siendo su Prioridad, MLFQS nivel de la lista. 
+
+Los Schedulers a implementar son FCFS, PS, RR, MLFQS 
+
+Los Quantums de RR y MLFQS serán los mismos que en los ejemplos y ejercicios en clase.
