@@ -28,7 +28,7 @@ readline:
     int $0x16               # Interrupción del teclado BIOS
 
     cmpb     $0x0D, %al    # Comprobar si es Enter
-    je imprimir            # Si es Enter, imprimir y salir
+    je imprimir            # Si es Enter, imprimir y volver a leer
     movb     %al, (%si)    # Almacenar el caracter en el buffer
     inc %si                # Incrementar el puntero del buffer
     jmp readline           # Volver a leer del teclado
@@ -37,7 +37,8 @@ readline:
 imprimir:
     mov $input_buffer, %si   # Puntero al inicio del buffer de entrada
     call writeline            # Llamar a la función writeline con la cadena de texto ingresada
-    jmp readline       # Volver a leer del teclado
+    mov $input_buffer, %si    # Restablecer el puntero del buffer de entrada al inicio
+    jmp readline             # Volver a leer del teclado
 
 writeline:
     push %ax               # Guardar AX
@@ -59,4 +60,4 @@ end_loop:
 
 # Buffer de entrada para almacenar caracteres del teclado
 .section .bss
-    .lcomm input_buffer, 128 # Buffer de 128 bytes para la entrada del teclado
+    .lcomm input_buffer, 128 # Buffer de 128 bytes para la entrada del teclado
